@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<input type="button" value="Add A New Info" onclick= "location.href='./create'">
+		<!-- <a href="{% url 'create' %}">Add</a> -->
+	</head>
+	
+	<div class="main" style="background-color: papayawhip;">
+	
+		{% for data in dataset %}.
+	
+		{{ data.title }}<br/>
+		{{ data.description }}<br/>
+		<a href="{% url 'update' data.id %}">Update</a>
+		<a href="{% url 'delete' data.id %}">Delete</a>
+		<hr/>
+	
+		{% endfor %}
+	
+	</div>	
+</html>
